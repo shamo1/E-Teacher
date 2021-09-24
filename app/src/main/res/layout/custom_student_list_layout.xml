@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/studentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/btnRemove"
+            android:fontFamily="@font/popinsemibold"
+            android:text="@string/student_name"
+            android:textColor="@color/color_primary"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/joineDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/studentName"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@id/btnRemove"
+            android:fontFamily="@font/popinlighta"
+            android:text="@string/joined_date"
+            android:textColor="@color/black"
+            android:textSize="14.0sp"
+            app:drawableLeftCompat="@drawable/ic_baseline_access_time_24" />
+
+        <Button
+            android:id="@+id/btnRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/color_primary"
+            android:fontFamily="@font/popinsemibold"
+            android:text="@string/remove"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/joineDate"
+            android:layout_marginTop="10dp"
+            android:background="#A5A0A0" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.AssignmentsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAssignments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_primary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Assignments" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewAssignments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarAssignments" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addAssignments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/color_primary"
+        android:src="@drawable/ic_baseline_add_24"
+        android:tint="@color/color_primary"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription"
+        tools:targetApi="lollipop" />
+
+</RelativeLayout>

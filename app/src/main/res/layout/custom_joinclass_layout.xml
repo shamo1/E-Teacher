@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_rounded_background_card"
+        android:elevation="5dp">
+
+        <TextView
+            android:id="@+id/liveIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/live_border"
+            android:fontFamily="@font/popinsemibold"
+            android:letterSpacing="0.2"
+            android:padding="5dp"
+            android:text="@string/live"
+            android:textColor="#D10606" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvsubjectName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/popinsemibold"
+                android:letterSpacing="0.1"
+                android:text="@string/subject_name"
+                android:textAllCaps="true"
+                android:textColor="@color/color_primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvSection"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/popinlighta"
+                android:letterSpacing="0.1"
+                android:text="@string/section"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvDepartment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/popinlighta"
+                android:letterSpacing="0.1"
+                android:text="@string/department"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_access_time_24" />
+
+                <TextView
+                    android:id="@+id/classTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/popinbold"
+                    android:text="12:30 PM"
+                    android:textColor="@color/black"
+                    android:textSize="18.0sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/classroomParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.ClassroomlistActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarClassroomList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_primary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Classrooms List"
+        app:titleTextColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/layoutbe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/noresultAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/black_canvas"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/popinlighta"
+            android:gravity="center"
+            android:text="@string/you_dont_have_created_joined_any_class"
+            android:textColor="@color/color_primary" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/llMyclassroom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarClassroomList"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/myclassTitile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/popinsemibold"
+            android:letterSpacing="0.1"
+            android:text="@string/my_classrooms"
+            android:textAllCaps="true"
+            android:textColor="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myclassTitile">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewMyclass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never" />
+
+            <ProgressBar
+                android:id="@+id/myClassprog"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_circuler_background"
+                android:elevation="10dp"
+                android:indeterminateTint="@color/color_primary"
+                android:padding="10dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/llMyclassroom"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/joinClassProg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/custom_circuler_background"
+            android:elevation="10dp"
+            android:indeterminateTint="@color/color_primary"
+            android:padding="10dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/joinedclassTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/popinsemibold"
+            android:letterSpacing="0.1"
+            android:text="@string/joined_classrooms"
+            android:textAllCaps="true"
+            android:textColor="@color/black" />
+
+        <RelativeLayout
+            android:id="@+id/RLjoinclass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/joinedclassTitle">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewJoinedClasses"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never" />
+
+            <ProgressBar
+                android:id="@+id/joinclassProg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/custom_circuler_background"
+                android:elevation="10dp"
+                android:indeterminateTint="@color/color_primary"
+                android:padding="10dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/joinClassnoresultAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/no_result_avatar"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/createJoinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/color_primary"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/ic_baseline_add_24"
+        android:tint="@color/white"
+        app:tint="@color/white" />
+
+</RelativeLayout>

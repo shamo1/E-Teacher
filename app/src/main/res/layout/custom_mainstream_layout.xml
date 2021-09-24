@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/popinsemibold"
+            android:text="Quiz Title goes here"
+            android:textColor="@color/color_primary"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/topic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/popinsemibold"
+            android:text="Topic"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topic"
+            android:layout_marginTop="10dp"
+            android:text="Description"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/duedate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            android:layout_marginTop="10dp"
+            android:text="Date"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/lineView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/duedate"
+            android:layout_marginTop="5dp"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/lineView"
+            >
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/popinbold"
+                android:text="Quiz"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/marks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/marks"
+                android:gravity="right"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

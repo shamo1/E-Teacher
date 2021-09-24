@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.JoinLiveClass">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarLive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_primary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Live" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarLive"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/popinsemibold"
+                android:text="@string/start_video_classroom"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvdpSubjectName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/popinsemibold"
+                android:letterSpacing="0.1"
+                android:text="Subject Name"
+                android:textAllCaps="true"
+                android:textColor="@color/color_primary"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/popinsemibold"
+                android:text="Classroom ID"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvClassID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E3E1E1"
+                android:fontFamily="@font/popinlighta"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/popinsemibold"
+                android:text="@string/join_code"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtvideoJoinCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:helperText="Enter video Join code(Code must be strong)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/btnLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llTv"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnStartVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FFFDFD"
+                android:drawableLeft="@drawable/ic_videocam"
+                android:fontFamily="@font/popinsemibold"
+                android:text="@string/start_video"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnInvite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/color_primary"
+                android:drawableLeft="@drawable/ic_baseline_person_add_24"
+                android:fontFamily="@font/popinsemibold"
+                android:text="@string/invite"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
